@@ -15,63 +15,63 @@ namespace MovieList.Data
             _database.CreateTableAsync<Note>().Wait();
         }
 
-        public Task<List<Movie>> GetMoviesAsync()
-        {
-            return _database.Table<Movie>().ToListAsync();
-        }
+        //public Task<List<Movie>> GetMoviesAsync()
+        //{
+        //    return _database.Table<Movie>().ToListAsync();
+        //}
 
-        public Task<Movie> GetMovieAsync(int id)
-        {
-            return _database.Table<Movie>()
-                            .Where(i => i.ID == id)
-                            .FirstOrDefaultAsync();
-        }
+        //public Task<Movie> GetMovieAsync(int id)
+        //{
+        //    return _database.Table<Movie>()
+        //                    .Where(i => i.ID == id)
+        //                    .FirstOrDefaultAsync();
+        //}
 
-        public Task<int> SaveMovieAsync(Movie movie)
-        {
-            if (movie.ID != 0)
-            {
-                return _database.UpdateAsync(movie);
-            }
-            else
-            {
-                return _database.InsertAsync(movie);
-            }
-        }
+        //public Task<int> SaveMovieAsync(Movie movie)
+        //{
+        //    if (movie.ID != 0)
+        //    {
+        //        return _database.UpdateAsync(movie);
+        //    }
+        //    else
+        //    {
+        //        return _database.InsertAsync(movie);
+        //    }
+        //}
 
-        public Task<int> DeleteMovieAsync(Movie movie)
-        {
-            return _database.DeleteAsync(movie);
-        }
+        //public Task<int> DeleteMovieAsync(Movie movie)
+        //{
+        //    return _database.DeleteAsync(movie);
+        //}
 
-        public Task<List<Credit>> GetCreditsAsync()
-        {
-            return _database.Table<Credit>().ToListAsync();
-        }
+        //public Task<List<Credit>> GetCreditsAsync()
+        //{
+        //    return _database.Table<Credit>().ToListAsync();
+        //}
         
-        public Task<Credit> GetCreditAsync(int id)
-        {
-            return _database.Table<Credit>()
-                            .Where(i => i.ID == id)
-                            .FirstOrDefaultAsync();
-        }
+        //public Task<Credit> GetCreditAsync(int id)
+        //{
+        //    return _database.Table<Credit>()
+        //                    .Where(i => i.ID == id)
+        //                    .FirstOrDefaultAsync();
+        //}
 
-        public Task<int> SaveCreditAsync(Credit credit)
-        {
-            if (credit.ID != 0)
-            {
-                return _database.UpdateAsync(credit);
-            }
-            else
-            {
-                return _database.InsertAsync(credit);
-            }
-        }
+        //public Task<int> SaveCreditAsync(Credit credit)
+        //{
+        //    if (credit.ID != 0)
+        //    {
+        //        return _database.UpdateAsync(credit);
+        //    }
+        //    else
+        //    {
+        //        return _database.InsertAsync(credit);
+        //    }
+        //}
 
-        public Task<int> DeleteCreditAsync(Credit credit)
-        {
-            return _database.DeleteAsync(credit);
-        }
+        //public Task<int> DeleteCreditAsync(Credit credit)
+        //{
+        //    return _database.DeleteAsync(credit);
+        //}
 
         public Task<List<Note>> GetNotesAsync()
         {
